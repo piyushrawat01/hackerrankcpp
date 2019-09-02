@@ -5,6 +5,7 @@
 #include<string>
 #include<sstream>
 #include<stdio.h>
+#include<iomanip>
 using namespace std;
 
 int main() {
@@ -17,6 +18,11 @@ int main() {
     getline(cin, input);
     stringstream ss(input);
     ss >> a >> b >> c >> f >> d;
-    cout << a << endl << b << endl << c << endl << f << endl << d << endl;
+    cout<< setprecision(3)<<fixed;
+    cout << a << endl << b << endl <<c << endl<< f << endl ;
+    cout<< setprecision(9)<<fixed;
+    cout<< d << endl;
+    
     return 0;
 }
+
