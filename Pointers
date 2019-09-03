@@ -1,1 +1,19 @@
+//Solution to pointers problem on hackerrank
 
+#include <stdio.h>
+#include<iostream>
+void update(int *a,int *b) {
+    // Complete this function  
+    *a=*a+*b;
+    *b=abs(*a-*b-*b);  // two times subtraction of b as it was added in a in previous step
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+return 0;
+}
